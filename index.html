@@ -49,7 +49,8 @@
       }
       input[type="text"],
       input[type="number"] {
-        width: 100%;
+        width: 90%; /* Shrinking the input width */
+        max-width: 450px; /* Added max-width to further limit size */
         padding: 15px;
         margin-bottom: 20px;
         border: 1px solid #444;
@@ -65,7 +66,8 @@
         background-color: #555;
       }
       button {
-        width: 100%;
+        width: 90%; /* Shrinking the button */
+        max-width: 450px; /* Consistent with the input fields */
         padding: 15px;
         background-color: #00d084;
         color: #1e1e1e;
@@ -211,13 +213,12 @@
 
       <!-- Leaderboard Section -->
       <div class="leaderboard">
-        <h2>Top Bettors (Call the number)</h2>
+        <h2>Top Bettors</h2>
         <ol>
-          <li>Chris - $1</li>
-          <li>Demetri - $1</li>
-          <li>Yianni - $1</li>
-          <li>Niko - $1</li>
-          <li>Conor - $1</li>
+          <li>Chris - $200</li>
+          <li>Demetri - $180</li>
+          <li>Yianni - $150</li>
+          <li>Niko - $120</li>
         </ol>
       </div>
 
@@ -225,11 +226,10 @@
       <div class="recent-bets">
         <h2>Recent Bets</h2>
         <ul>
-          <li>Chris bet $1 on Bucs Saint U41.5</li>
-          <li>Demetri bet $1 on Bama -18.5</li>
-          <li>Yianni bet $1 on Bills -2.5</li>
-          <li>Niko bet $1 on Bears -2.5</li>
-          <li>Conor bet $1 on Giants/Bengals Over</li>
+          <li>Chris bet $50 on Chiefs to win</li>
+          <li>Demetri bet $60 on Eagles over Cowboys</li>
+          <li>Yianni bet $40 on Bills to cover the spread</li>
+          <li>Niko bet $20 on Falcons to win</li>
         </ul>
       </div>
 
@@ -238,19 +238,20 @@
         <h2>Vote for the Best Bet</h2>
         <form>
           <label>
-            <input type="radio" name="bet" value="Chris" /> Chris: XXXX </label
+            <input type="radio" name="bet" value="Chris" /> Chris: Chiefs to win
+            ($50) </label
           ><br />
           <label>
-            <input type="radio" name="bet" value="Demetri" /> Demetri: XXXX </label
+            <input type="radio" name="bet" value="Demetri" /> Demetri: Eagles
+            over Cowboys ($60) </label
           ><br />
           <label>
-            <input type="radio" name="bet" value="Yianni" /> Yianni: XXXX </label
+            <input type="radio" name="bet" value="Yianni" /> Yianni: Bills to
+            cover the spread ($40) </label
           ><br />
           <label>
-            <input type="radio" name="bet" value="Niko" /> Niko: XXXX </label
-          ><br />
-          <label>
-            <input type="radio" name="bet" value="Yianni" /> Conor: XXXX </label
+            <input type="radio" name="bet" value="Niko" /> Niko: Falcons to win
+            ($20) </label
           ><br />
           <button type="submit">Submit Vote</button>
         </form>
@@ -260,17 +261,17 @@
       <div class="stats-section">
         <h2>Betting Stats</h2>
         <ul>
-          <li>Total Bets Placed: 5</li>
-          <li>Total Amount Contributed: $5</li>
-          <li>Highest Bet: $1 by Multiple</li>
-          <li>Lowest Bet: $1 by Multiple</li>
+          <li>Total Bets Placed: 10</li>
+          <li>Total Amount Contributed: $500</li>
+          <li>Highest Bet: $100 by Chris</li>
+          <li>Lowest Bet: $20 by Niko</li>
         </ul>
       </div>
 
       <!-- Betting Streak Section -->
       <div class="streak-section">
         <h2>Longest Betting Streak</h2>
-        <p>No one yet!</p>
+        <p>Yianni - 2 winning bets in a row!</p>
       </div>
 
       <!-- Dark Mode Toggle -->
