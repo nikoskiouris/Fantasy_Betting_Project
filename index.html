@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>12 Ordinary Guys Betting Submission</title>
+    <title>Fantasy Football Betting Submission</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -11,122 +11,278 @@
     <style>
       body {
         font-family: "Roboto", sans-serif;
-        background-color: #f0f2f5;
+        background-color: #1e1e1e;
+        color: #fff;
         margin: 0;
         padding: 20px;
       }
       .container {
-        max-width: 500px;
+        max-width: 600px;
         margin: 0 auto;
-        background-color: #ffffff;
-        padding: 30px;
+        background-color: #333;
+        padding: 40px;
         border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        text-align: center;
       }
       h1 {
-        text-align: center;
-        font-size: 24px;
+        font-size: 28px;
+        margin-bottom: 30px;
+        color: #00d084;
+      }
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
         margin-bottom: 20px;
-        color: #333;
+      }
+      .icons span {
+        margin: 0 10px;
       }
       label {
         display: block;
         margin: 10px 0 5px;
         font-weight: 500;
-        color: #444;
+        color: #fff;
+        text-align: left;
       }
       input[type="text"],
       input[type="number"] {
         width: 100%;
-        padding: 12px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid #444;
         border-radius: 6px;
+        background-color: #444;
+        color: #fff;
         font-size: 16px;
-        transition: border-color 0.3s ease;
       }
       input[type="text"]:focus,
       input[type="number"]:focus {
-        border-color: #007bff;
+        border-color: #00d084;
         outline: none;
+        background-color: #555;
       }
       button {
         width: 100%;
-        padding: 14px;
-        background-color: #007bff;
-        color: #ffffff;
+        padding: 15px;
+        background-color: #00d084;
+        color: #1e1e1e;
         border: none;
         border-radius: 6px;
         font-size: 18px;
+        font-weight: bold;
         cursor: pointer;
         transition: background-color 0.3s ease;
       }
       button:hover {
-        background-color: #0056b3;
-      }
-      .form-group {
-        margin-bottom: 15px;
+        background-color: #00a064;
       }
       .note {
-        text-align: center;
-        color: #777;
+        margin-top: 20px;
         font-size: 14px;
+        color: #ccc;
       }
+
+      .leaderboard,
+      .recent-bets,
+      .vote-section,
+      .stats-section,
+      .streak-section {
+        background-color: #222;
+        color: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 30px;
+        text-align: center;
+      }
+      h2 {
+        color: #00d084;
+        margin-bottom: 15px;
+      }
+      ol,
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .leaderboard li,
+      .recent-bets li,
+      .stats-section li {
+        font-size: 18px;
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .vote-section label {
+        margin-bottom: 10px;
+        display: block;
+        font-size: 16px;
+        text-align: left;
+      }
+      .vote-section button {
+        padding: 10px 20px;
+        margin-top: 15px;
+        background-color: #00d084;
+        color: #1e1e1e;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .toggle-section {
+        margin-top: 30px;
+        text-align: center;
+      }
+      .toggle-section button {
+        padding: 10px 20px;
+        background-color: #00d084;
+        color: #1e1e1e;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .dark-mode {
+        background-color: #f0f0f0;
+        color: #000;
+      }
+      .dark-mode .container {
+        background-color: #fff;
+        color: #000;
+      }
+
       @media (max-width: 600px) {
         .container {
           padding: 20px;
         }
         h1 {
-          font-size: 22px;
+          font-size: 24px;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>12 Ordinary Guys Betting Submission</h1>
+      <h1>Fantasy Football Betting Submission</h1>
+      <div class="icons">
+        <span>💸</span>
+        <span>🏈</span>
+      </div>
       <form
         id="betForm"
         action="https://script.google.com/macros/s/AKfycbyVlWWlc4oXWd5R54dAXNkld0NIvLreGWoji-5cT0mcMA2XK1g_KwKnIxBbkuZOxcdZ/exec"
         method="POST"
       >
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
 
-        <div class="form-group">
-          <label for="bet">Bet:</label>
-          <input
-            type="text"
-            id="bet"
-            name="bet"
-            placeholder="Enter your bet"
-            required
-          />
-        </div>
+        <label for="bet">Bet:</label>
+        <input
+          type="text"
+          id="bet"
+          name="bet"
+          placeholder="Enter your bet"
+          required
+        />
 
-        <div class="form-group">
-          <label for="amount">Amount Contributed:</label>
-          <input
-            type="number"
-            id="amount"
-            name="amount"
-            placeholder="Enter the amount"
-            required
-            min="1"
-          />
-        </div>
+        <label for="amount">Amount Contributed ($):</label>
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          placeholder="Enter the amount"
+          required
+          min="1"
+        />
 
         <button type="submit">Submit Bet</button>
       </form>
       <p class="note">All bets will be recorded in the shared Google Sheet.</p>
+
+      <!-- Leaderboard Section -->
+      <div class="leaderboard">
+        <h2>Top Bettors (Call the number)</h2>
+        <ol>
+          <li>Chris - $1</li>
+          <li>Demetri - $1</li>
+          <li>Yianni - $1</li>
+          <li>Niko - $1</li>
+          <li>Conor - $1</li>
+        </ol>
+      </div>
+
+      <!-- Recent Bets Section -->
+      <div class="recent-bets">
+        <h2>Recent Bets</h2>
+        <ul>
+          <li>Chris bet $1 on Bucs Saint U41.5</li>
+          <li>Demetri bet $1 on Bama -18.5</li>
+          <li>Yianni bet $1 on Bills -2.5</li>
+          <li>Niko bet $1 on Bears -2.5</li>
+          <li>Conor bet $1 on Giants/Bengals Over</li>
+        </ul>
+      </div>
+
+      <!-- Live Polling Section -->
+      <div class="vote-section">
+        <h2>Vote for the Best Bet</h2>
+        <form>
+          <label>
+            <input type="radio" name="bet" value="Chris" /> Chris: XXXX </label
+          ><br />
+          <label>
+            <input type="radio" name="bet" value="Demetri" /> Demetri: XXXX </label
+          ><br />
+          <label>
+            <input type="radio" name="bet" value="Yianni" /> Yianni: XXXX </label
+          ><br />
+          <label>
+            <input type="radio" name="bet" value="Niko" /> Niko: XXXX </label
+          ><br />
+          <label>
+            <input type="radio" name="bet" value="Yianni" /> Conor: XXXX </label
+          ><br />
+          <button type="submit">Submit Vote</button>
+        </form>
+      </div>
+
+      <!-- Betting Stats Section -->
+      <div class="stats-section">
+        <h2>Betting Stats</h2>
+        <ul>
+          <li>Total Bets Placed: 5</li>
+          <li>Total Amount Contributed: $5</li>
+          <li>Highest Bet: $1 by Multiple</li>
+          <li>Lowest Bet: $1 by Multiple</li>
+        </ul>
+      </div>
+
+      <!-- Betting Streak Section -->
+      <div class="streak-section">
+        <h2>Longest Betting Streak</h2>
+        <p>No one yet!</p>
+      </div>
+
+      <!-- Dark Mode Toggle -->
+      <div class="toggle-section">
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      </div>
     </div>
+
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+    </script>
   </body>
 </html>
